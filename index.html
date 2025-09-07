@@ -135,6 +135,7 @@ header {
 }
 
 /* FOOTER */
+/* FOOTER */
 footer {
     padding: 20px;
     background-color: rgba(0,0,0,0.4);
@@ -142,14 +143,31 @@ footer {
     font-size: 0.9rem;
     backdrop-filter: blur(5px);
 }
-footer a {
-    color: #00d9ff;
-    text-decoration: none;
-    margin: 0 8px;
+
+.footer-links {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-footer a:hover {
+
+.footer-links span,
+.footer-links a {
+    color: #00d9ff; /* mesma cor para todos */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.footer-links a:hover {
     text-decoration: underline;
 }
+
 </style>
 </head>
 <body>
@@ -161,41 +179,47 @@ footer a:hover {
 <section class="about">
     <img src="sua-foto.jpg" alt="Foto de Vitor Eduardo" data-aos="zoom-in">
     <div class="about-text" data-aos="fade-left">
-        <h2>Sobre Mim</h2>
+        <h2>Sobre Mim:</h2>
         <p>Sou um engenheiro apaixonado por projetos de controle e automação, com experiência no desenvolvimento de sistemas embarcados, veículos autônomos e integração de hardware e software. Meu foco está em criar soluções inovadoras que unam eficiência e tecnologia de ponta.</p>
         <div class="about-buttons">
-            <a href="mailto:seuemail@exemplo.com"><i class="fa-solid fa-envelope"></i> Contato</a>
-            <a href="https://github.com/seuusuario" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/vitor-eduardo-freitas-oliveira-a4438423b" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
         </div>
     </div>
 </section>
 
+
 <section class="projects">
     <div class="card" data-aos="fade-up" onclick="window.location.href='projeto1.html'">
         <h2>Controle de Distância - Servo Motor</h2>
-        <p>Controle preciso da distância de uma esfera sobre haste inclinável.</p>
+        <p>Controle da distância entre um sensor infravermelho e uma esfera em uma haste inclinável utilizando um servomotor.</p>
     </div>
     <div class="card" data-aos="fade-up" data-aos-delay="100" onclick="window.location.href='projeto2.html'">
         <h2>Controle de Ângulo - Brushless</h2>
-        <p>Controle de inclinação usando motores brushless nas extremidades.</p>
+        <p>Controle de inclinação de uma haste utilizando motores brushless fixados em suas extremidades.</p>
     </div>
     <div class="card" data-aos="fade-up" data-aos-delay="200" onclick="window.location.href='projeto3.html'">
         <h2>Controle de Nível de Água</h2>
-        <p>Regulação automática do nível de um tanque de água.</p>
+        <p>Regulação automática do nível de um tanque de água usando sensor ultrassônico.</p>
     </div>
     <div class="card" data-aos="fade-up" data-aos-delay="300" onclick="window.location.href='projeto4.html'">
         <h2>Barco Cooperativo com Drones</h2>
-        <p>Coordenação de barco autônomo e drones para missões conjuntas.</p>
+        <p>(Aerocat)Coordenação de barco autônomo e drones para missões conjuntas.</p>
     </div>
 </section>
 
 <footer data-aos="fade-up">
-    <p>© 2025 Vitor Eduardo | 
-        <a href="Vitoreduardoxbox@gmail.com">E-mail</a> | 
-        <a href="https://www.linkedin.com/in/vitor-eduardo-freitas-oliveira-a4438423b" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/Vitaum-not" target="_blank">GitHub</a>
-    </p>
+    <p>© 2025 Vitor Eduardo Freitas Oliveira</p>
+    <div class="footer-links">
+        <span class="static"><i class="fa-solid fa-envelope"></i> Vitoreduardoxbox@gmail.com</span>
+        <span class="static"><i class="fa-solid fa-phone"></i> +55 31 99988-6070</span>
+        <a href="https://github.com/Vitaum-not" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+    </div>
 </footer>
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
