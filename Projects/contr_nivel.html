@@ -43,31 +43,34 @@
       margin: 0;
     }
 
-    /* Conteúdo */
+    /* Conteúdo mais largo */
     .content {
-      max-width: 800px;
+      max-width: 1100px;
       margin: auto;
       flex: 1;
-      padding: 20px;
-    }
-    .content p {
+      padding: 40px 30px;
       font-size: 1rem;
       line-height: 1.6;
     }
+
+    /* Botão fixo de voltar */
     a.voltar {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 15px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
       background: #00d9ff;
       color: #002b36;
       text-decoration: none;
-      border-radius: 10px;
-      font-weight: 500;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       transition: background 0.3s ease, transform 0.2s ease;
+      z-index: 1000;
     }
     a.voltar:hover {
       background: #00a0c6;
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
     /* Footer igual ao index */
@@ -115,8 +118,12 @@
   
   <div class="content">
     <p>Detalhes técnicos do projeto, imagens, esquemas, código e explicações...</p>
-    <a href="../index.html" class="voltar">← Voltar ao Portfólio</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo eget sapien aliquet tristique. Nulla facilisi. Integer non feugiat nisl, nec scelerisque magna. Donec laoreet felis nec magna congue, nec dictum eros aliquam.</p>
+    <p>Proin suscipit odio sit amet ipsum ultrices, vel laoreet odio convallis. In hac habitasse platea dictumst. Integer viverra suscipit est, ac volutpat risus consectetur in.</p>
   </div>
+
+  <!-- Botão fixo de voltar -->
+  <a href="../index.html" class="voltar">← Voltar</a>
 
   <footer>
     <p>© 2025 Vitor Eduardo Freitas Oliveira</p>
