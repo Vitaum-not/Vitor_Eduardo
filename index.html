@@ -168,6 +168,25 @@ header {
     text-align: center;
     cursor: default;
 }
+.publications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 340px;
+    justify-items: center;
+}
+@media (max-width: 1024px) {
+    .publications {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 40px;
+    }
+}
+@media (max-width: 600px) {
+    .publications {
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+    }
+}
 
 /* FOOTER */
 footer {
@@ -262,6 +281,18 @@ footer {
     <div class="skill-card">ROS</div>
     <div class="skill-card">PLC</div>
     <div class="skill-card">CAD</div>
+</section>
+
+<h2 class="section-title">Trabalhos Publicados</h2>
+<section class="publications">
+    <div class="card">
+        <h2>Artigo sobre Controle Autônomo</h2>
+        <p>Publicado em conferência internacional XYZ sobre sistemas autônomos.</p>
+    </div>
+    <div class="card">
+        <h2>Simulação de Veículos Autônomos</h2>
+        <p>Publicado na revista ABC, analisando estratégias de navegação cooperativa.</p>
+    </div>
 </section>
 
 <footer>
