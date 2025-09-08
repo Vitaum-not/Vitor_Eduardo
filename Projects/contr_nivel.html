@@ -26,22 +26,21 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Header */
+    /* Header com título do projeto */
     header {
       padding: 20px;
       background: rgba(0,0,0,0.3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
       backdrop-filter: blur(5px);
     }
-    .logo {
+    header h1 {
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: 2px;
       background: linear-gradient(90deg, #00d9ff, #00ffa2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin: 0;
     }
 
     /* Conteúdo */
@@ -51,12 +50,9 @@
       flex: 1;
       padding: 20px;
     }
-    .content h1 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      background: linear-gradient(90deg, #00ffa2, #00d9ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .content p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
     a.voltar {
       display: inline-block;
@@ -112,13 +108,12 @@
   </style>
 </head>
 <body>
-  <!-- Header igual ao index -->
+  <!-- Header com o título do projeto -->
   <header>
-    <div class="logo">VITOR EDUARDO</div>
+    <h1>Controle de nível</h1>
   </header>
   
   <div class="content">
-    <h1>Controle de nível</h1>
     <p>Detalhes técnicos do projeto, imagens, esquemas, código e explicações...</p>
     <a href="../index.html" class="voltar">← Voltar ao Portfólio</a>
   </div>
