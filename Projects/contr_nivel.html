@@ -8,7 +8,9 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #002b36;
+      background: linear-gradient(270deg, #002b36, #003b46, #005f6b, #008c9e);
+      background-size: 800% 800%;
+      animation: gradientBG 15s ease infinite;
       color: white;
       margin: 0;
       padding: 0;
@@ -16,18 +18,45 @@
       flex-direction: column;
       min-height: 100vh;
     }
-    header {
-      padding: 15px 0;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #00d9ff;
+
+    /* Gradiente animado do fundo */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
+
+    /* Header */
+    header {
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00d9ff, #00ffa2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Conteúdo */
     .content {
       max-width: 800px;
       margin: auto;
       flex: 1;
       padding: 20px;
+    }
+    .content h1 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #00ffa2, #00d9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     a.voltar {
       display: inline-block;
@@ -83,9 +112,13 @@
   </style>
 </head>
 <body>
-  <header>Controle de nível</header>
+  <!-- Header igual ao index -->
+  <header>
+    <div class="logo">VITOR EDUARDO</div>
+  </header>
   
   <div class="content">
+    <h1>Controle de nível</h1>
     <p>Detalhes técnicos do projeto, imagens, esquemas, código e explicações...</p>
     <a href="../index.html" class="voltar">← Voltar ao Portfólio</a>
   </div>
