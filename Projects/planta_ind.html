@@ -1,0 +1,139 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle e supervisório de planta industrial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, #002b36, #003b46, #005f6b, #008c9e);
+      background-size: 800% 800%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Gradiente animado do fundo */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header com título do projeto */
+    header {
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00d9ff, #00ffa2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+
+    /* Conteúdo mais largo */
+    .content {
+      max-width: 1100px;
+      margin: auto;
+      flex: 1;
+      padding: 40px 30px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Botão fixo de voltar no topo */
+    a.voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 18px;
+      background: #00d9ff;
+      color: #002b36;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: background 0.3s ease, transform 0.2s ease;
+      z-index: 1000;
+    }
+    a.voltar:hover {
+      background: #00a0c6;
+      transform: scale(1.05);
+    }
+
+    /* Footer igual ao index */
+    footer {
+      padding: 20px;
+      background-color: rgba(0,0,0,0.4);
+      text-align: center;
+      font-size: 0.9rem;
+      backdrop-filter: blur(5px);
+    }
+    .footer-links {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .footer-links span,
+    .footer-links a {
+      color: #00d9ff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-links a {
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .footer-links span:not(:last-child)::after,
+    .footer-links a:not(:last-child)::after {
+      content: "|";
+      margin: 0 10px;
+      color: #00d9ff;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão fixo de voltar -->
+  <a href="../index.html" class="voltar">← Voltar ao portfólio</a>
+
+  <!-- Header com o título do projeto -->
+  <header>
+    <h1>Controle e supervisório de planta industrial</h1>
+  </header>
+  
+  <div class="content">
+    <p>Detalhes técnicos do projeto, imagens, esquemas, código e explicações...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo eget sapien aliquet tristique. Nulla facilisi. Integer non feugiat nisl, nec scelerisque magna. Donec laoreet felis nec magna congue, nec dictum eros aliquam.</p>
+    <p>Proin suscipit odio sit amet ipsum ultrices, vel laoreet odio convallis. In hac habitasse platea dictumst. Integer viverra suscipit est, ac volutpat risus consectetur in.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Vitor Eduardo Freitas Oliveira</p>
+    <div class="footer-links">
+        <span class="static"><i class="fa-solid fa-envelope"></i> Vitoreduardoxbox@gmail.com</span>
+        <span class="static"><i class="fa-solid fa-phone"></i> +55 31 99988-6070</span>
+        <a href="https://github.com/Vitaum-not" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+    </div>
+  </footer>
+</body>
+</html>
