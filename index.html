@@ -103,11 +103,28 @@ header {
 /* PROJECTS */
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 projetos por linha */
-    gap: 20px; /* menor espaço entre os cards */
-    padding: 40px 320px;
-    justify-items: center; /* centraliza os cards dentro das colunas */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 60px; /* padding lateral menor para começar */
+    justify-items: center;
 }
+
+/* Ajustes para tablets */
+@media (max-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 40px;
+    }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+    }
+}
+
 .card {
     background-color: rgba(0, 79, 89, 0.8);
     border-radius: 15px;
@@ -230,6 +247,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
