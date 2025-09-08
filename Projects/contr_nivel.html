@@ -4,13 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Controle de nível</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background: #002b36;
       color: white;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -26,6 +27,7 @@
       max-width: 800px;
       margin: auto;
       flex: 1;
+      padding: 20px;
     }
     a.voltar {
       display: inline-block;
@@ -36,6 +38,11 @@
       text-decoration: none;
       border-radius: 10px;
       font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    a.voltar:hover {
+      background: #00a0c6;
+      transform: scale(1.05);
     }
 
     /* Footer igual ao index */
@@ -76,11 +83,11 @@
   </style>
 </head>
 <body>
-  <header>Controle de nível de </header>
+  <header>Controle de nível</header>
   
   <div class="content">
     <p>Detalhes técnicos do projeto, imagens, esquemas, código e explicações...</p>
-    <a href="/index.html" class="voltar">← Voltar ao Portfólio</a>
+    <a href="../index.html" class="voltar">← Voltar ao Portfólio</a>
   </div>
 
   <footer>
