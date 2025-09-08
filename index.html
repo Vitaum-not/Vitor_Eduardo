@@ -49,14 +49,6 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-/* SECTION TITLES */
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #00d9ff;
-    margin: 40px 0 20px 0;
-}
-
 /* ABOUT */
 .about {
     display: flex;
@@ -65,7 +57,6 @@ header {
     gap: 30px;
     padding: 50px 20px;
     flex-wrap: wrap;
-    text-align: center; /* centraliza o texto */
 }
 .about img {
     width: 180px;
@@ -109,8 +100,16 @@ header {
     transform: scale(1.05);
 }
 
+/* SECTION TITLES */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #00d9ff;
+    margin: 40px 0 20px 0;
+}
+
 /* PROJECTS */
-.projects, .publications {
+.projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -118,13 +117,13 @@ header {
     justify-items: center;
 }
 @media (max-width: 1024px) {
-    .projects, .publications {
+    .projects {
         grid-template-columns: repeat(2, 1fr);
         padding: 20px 40px;
     }
 }
 @media (max-width: 600px) {
-    .projects, .publications {
+    .projects {
         grid-template-columns: 1fr;
         padding: 20px 20px;
     }
@@ -214,10 +213,10 @@ footer {
     <div class="logo">VITOR EDUARDO</div>
 </header>
 
-<h2 class="section-title">Sobre Mim</h2>
 <section class="about">
     <img src="images/Perfil_portif.jpeg" alt="Foto de Vitor Eduardo">
     <div class="about-text">
+        <h2>Sobre Mim:</h2>
         <p>Sou um engenheiro apaixonado por projetos de controle e automação, com experiência no desenvolvimento de sistemas embarcados, veículos autônomos e integração de hardware e software. Meu foco está em criar soluções inovadoras que unam eficiência e tecnologia.</p>
         <div class="about-buttons">
             <a href="https://www.linkedin.com/in/vitor-eduardo-freitas-oliveira-a4438423b" target="_blank">
@@ -263,18 +262,6 @@ footer {
     <div class="skill-card">ROS</div>
     <div class="skill-card">PLC</div>
     <div class="skill-card">CAD</div>
-</section>
-
-<h2 class="section-title">Trabalhos Publicados</h2>
-<section class="publications">
-    <div class="card">
-        <h2>Artigo sobre Controle Autônomo</h2>
-        <p>Publicado em conferência internacional XYZ sobre sistemas autônomos.</p>
-    </div>
-    <div class="card">
-        <h2>Simulação de Veículos Autônomos</h2>
-        <p>Publicado na revista ABC, analisando estratégias de navegação cooperativa.</p>
-    </div>
 </section>
 
 <footer>
