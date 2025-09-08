@@ -108,7 +108,7 @@ header {
     justify-content: center;
     padding: 40px;
     gap: 25px;
-    flex: 1;
+    
 }
 .card {
     background-color: rgba(0, 79, 89, 0.8);
@@ -198,22 +198,24 @@ footer {
 
 
 <section class="projects">
-    <div class="card" data-aos="fade-up" onclick="window.location.href='projeto1.html'">
-        <h2>Controle de Distância - Servo Motor</h2>
-        <p>Controle da distância entre um sensor infravermelho e uma esfera em uma haste inclinável utilizando um servomotor.</p>
+
+       <div class="card" data-aos="fade-up" data-aos-delay="300" onclick="window.location.href='Barco.html'">
+        <h2>Barco Cooperativo com Drones</h2>
+        <p>(Aerocat)Coordenação de barco autônomo e drones para missões conjuntas.</p>
     </div>
     <div class="card" data-aos="fade-up" data-aos-delay="100" onclick="window.location.href='projeto2.html'">
         <h2>Controle de Ângulo - Brushless</h2>
         <p>Controle de inclinação de uma haste utilizando motores brushless fixados em suas extremidades.</p>
     </div>
+    <div class="card" data-aos="fade-up" onclick="window.location.href='projeto1.html'">
+        <h2>Controle de Distância - Servo Motor</h2>
+        <p>Controle da distância entre um sensor infravermelho e uma esfera em uma haste inclinável utilizando um servomotor.</p>
+    </div>
     <div class="card" data-aos="fade-up" data-aos-delay="200" onclick="window.location.href='projeto3.html'">
         <h2>Controle de Nível de Água</h2>
         <p>Regulação automática do nível de um tanque de água usando sensor ultrassônico.</p>
     </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="300" onclick="window.location.href='projeto4.html'">
-        <h2>Barco Cooperativo com Drones</h2>
-        <p>(Aerocat)Coordenação de barco autônomo e drones para missões conjuntas.</p>
-    </div>
+ 
 </section>
 
 <footer data-aos="fade-up">
@@ -238,6 +240,7 @@ AOS.init({
 </body>
 
 </html>
+
 
 
 
