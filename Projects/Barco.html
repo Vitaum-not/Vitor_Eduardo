@@ -112,7 +112,7 @@
       padding-bottom: 6px;
     }
 
-    /* Galeria de mídias */
+    /* Galeria */
     .media-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -125,11 +125,61 @@
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
     .media-gallery img:hover,
     .media-gallery iframe:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.95);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+    .modal iframe {
+      width: 80%;
+      height: 70vh;
+      display: block;
+      margin: auto;
+      border: none;
+      border-radius: 12px;
+    }
+    #caption {
+      margin: 15px auto;
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 45px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .close:hover {
+      color: #00d9ff;
     }
   </style>
 </head>
@@ -146,72 +196,31 @@
       O projeto teve como objetivo projetar e desenvolver um veículo de superfície não tripulado (USV), 
       do tipo catamarã, totalmente autônomo, capaz de operar em cooperação com um veículo aéreo não 
       tripulado (UAV). O trabalho foi desenvolvido em dupla com meu colega 
-      <strong>João Marcelo Ribeiro Silva(https://joaomarcelors.github.io/portfolio/index.html)</strong>, sob orientação do professor 
+      <strong><a href="https://joaomarcelors.github.io/portfolio/index.html" target="_blank">João Marcelo Ribeiro Silva</a></strong>, sob orientação do professor 
       <strong>Accacio F. dos Santos Neto</strong>.
     </p>
 
-    <h2>USV – Catamarã Autônomo</h2>
-    <p>
-      O USV foi projetado com dois propulsores aéreos e uma plataforma de pouso para o UAV. 
-      A maior parte das peças foi modelada em 3D no <strong>Autodesk Inventor</strong>, impressa em ABS por manufatura aditiva e posteriormente montada. 
-      O sistema embarcado foi implementado em uma placa de circuito impresso (PCB) própria, projetada no <strong>Proteus</strong> e usinada em uma fresadora CNC. 
-      O controle foi realizado por um <strong>ESP32</strong>, programado no <strong>PlatformIO</strong>, integrado aos seguintes sensores e atuadores:
-    </p>
-    <ul>
-      <li>Módulo GPS <strong>GY-NEO6MV2</strong></li>
-      <li>Sensor de orientação <strong>HMC5883L</strong></li>
-      <li>Unidade inercial <strong>MPU-6050</strong></li>
-      <li>Dois <strong>ESCs</strong> para controle dos motores</li>
-    </ul>
-
-    <h2>UAV – Drone</h2>
-    <p>
-      Para a cooperação aérea, utilizamos o <strong>DJI Tello</strong>, responsável pelas operações de decolagem, voo e pouso sobre o catamarã.
-    </p>
-
-    <h2>Sistema de Comunicação</h2>
-    <p>
-      A comunicação entre o USV e o UAV foi implementada por meio do <strong>framework ROS</strong>, utilizando conexão Wi-Fi. 
-      Dessa forma, foi possível operar o drone com joystick, executar a navegação autônoma do USV e realizar a aquisição e armazenamento de dados das missões.
-    </p>
-
-    <h2>Perspectivas Futuras</h2>
-    <p>
-      O trabalho encontra-se em aprimoramento, com a elaboração de um artigo científico sobre odometria aplicada a ambos os veículos. 
-      Os próximos passos incluem o desenvolvimento de decolagem, pouso e voos autônomos do UAV, utilizando um marcador posicionado na plataforma do USV para maior precisão.
-    </p>
-
-    <h2>Trabalhos Publicados</h2>
-    <p>Lista de artigos, papers e publicações científicas relacionados ao projeto:</p>
-    <ul>
-      <li><a href="#" target="_blank">[Em breve] Artigo IEEE sobre odometria do sistema</a></li>
-      <li><a href="#" target="_blank">[Placeholder] Link para publicação</a></li>
-    </ul>
-
     <h2>Mídias</h2>
-    <p>Alguns registros do projeto em imagens e vídeos:</p>
     <div class="media-gallery">
       <!-- Imagens -->
-     <img src="../images/aerocat_v2_without_platform.png" alt="Modelo 3D do USV">
-<img src="../images/plataform_design.png" alt="Modelo 3D com a plataforma">
-<img src="../images/aerocatv2.jpg" alt="Aerocat V2">
-<img src="../images/Componentes.png" alt="Esquemático dos componentes">
-<img src="../images/pcb.png" alt="Posicionamento dos componentes na placa">
-<img src="../images/pcb_designed.png" alt="Modelo 3D da PCB">
-<img src="../images/usinada.jpg" alt="Trilhas usinadas">
-<img src="../images/pra_soldar.jpg" alt="Posicionamento dos componentes na placa usinada">
-<img src="../images/sistema.jpg" alt="Sistema eletrônico">
-<img src="../images/rigidBody (1).png" alt="Corpo rígido">
-<img src="../images/controldiagram (1).png" alt="Diagrama de controle">
-<img src="../images/rosgraph (1).png" alt="Rosgraph">
+      <img src="../images/aerocat_v2_without_platform.png" alt="Modelo 3D do USV">
+      <img src="../images/plataform_design.png" alt="Modelo 3D com a plataforma">
+      <img src="../images/aerocatv2.jpg" alt="Aerocat V2">
 
-      
-      <!-- Vídeo do YouTube -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
-        title="Demonstração do USV AEROCAT" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+      <!-- Exemplo de vídeo YouTube -->
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Demonstração do USV AEROCAT"></iframe>
+
+      <!-- Exemplo de vídeo GitHub (raw .mp4) -->
+      <iframe src="https://github.com/SEU_REPO/raw/main/video.mp4" title="Teste em campo"></iframe>
     </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="mediaModal" class="modal">
+    <span class="close">&times;</span>
+    <img id="imgAmpliada" class="modal-content">
+    <iframe id="videoAmpliado" allowfullscreen></iframe>
+    <div id="caption"></div>
   </div>
 
   <footer>
@@ -224,5 +233,48 @@
         </a>
     </div>
   </footer>
+
+  <script>
+  var modal = document.getElementById("mediaModal");
+  var modalImg = document.getElementById("imgAmpliada");
+  var modalVideo = document.getElementById("videoAmpliado");
+  var captionText = document.getElementById("caption");
+
+  // Todas as imagens
+  document.querySelectorAll(".media-gallery img").forEach(function(img) {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.style.display = "block";
+      modalVideo.style.display = "none";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+  });
+
+  // Todos os vídeos
+  document.querySelectorAll(".media-gallery iframe").forEach(function(vid) {
+    vid.onclick = function(e) {
+      e.preventDefault();
+      modal.style.display = "block";
+      modalImg.style.display = "none";
+      modalVideo.style.display = "block";
+      modalVideo.src = this.src; // carrega o mesmo vídeo
+      captionText.innerHTML = this.title;
+    }
+  });
+
+  // Fechar modal
+  document.querySelector(".close").onclick = function() {
+    modal.style.display = "none";
+    modalVideo.src = ""; // parar vídeo
+  }
+
+  modal.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      modalVideo.src = "";
+    }
+  }
+  </script>
 </body>
 </html>
